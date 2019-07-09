@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.receitasapp.activity.LoginActivity">
+    tools:context="com.example.receitasapp.activity.CadastroActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -18,33 +19,48 @@
         android:text="Receita Fácil"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtCadastroEmail"
+        app:layout_constraintBottom_toTopOf="@+id/edtCadastroNome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864" />
+        app:layout_constraintVertical_bias="0.656" />
 
     <EditText
-        android:id="@+id/edtLoginEmail"
+        android:id="@+id/edtCadastroNome"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edt_background"
+        android:hint=" Nome"
+        app:layout_constraintBottom_toTopOf="@+id/edtCadastroEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCadastroEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="436dp"
         android:background="@drawable/edt_background"
         android:hint=" E-mail"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/edtLoginSenha"
+        android:id="@+id/edtCadastroSenha"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -58,11 +74,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtLoginEmail"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toBottomOf="@+id/edtCadastroEmail"
+        app:layout_constraintVertical_bias="0.025" />
 
     <Button
-        android:id="@+id/btnEntrar"
+        android:id="@+id/btnCadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -72,47 +88,14 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/buttom_background"
-        android:text="ENTRAR"
+        android:text="CADASTRAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtLoginSenha"
+        app:layout_constraintTop_toBottomOf="@+id/edtCadastroSenha"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:text="@string/help_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:text="@string/cadastrar"
-        android:onClick="goToCadastroActivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
