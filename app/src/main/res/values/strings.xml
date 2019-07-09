@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ReceitasApp</string>
+    <string name="help_login">Esqueceu seus dados de login? <font color='#3498db'>Obtenha ajuda para entrar.</font></string>
+    <string name="cadastrar">Não tem uma conta? <font color='#3498db'>Cadastre-se.</font></string>
+</resources>
