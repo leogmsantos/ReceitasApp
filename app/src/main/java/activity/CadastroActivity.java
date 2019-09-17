@@ -1,4 +1,4 @@
-package com.example.receitasapp.activity;
+package activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -66,9 +66,11 @@ public class CadastroActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(CadastroActivity.this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CadastroActivity.this, getString(R.string.cadastro_sucesso), Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            finish();
                         }else {
-
+                            Toast.makeText(CadastroActivity.this, task.getException().toString(), Toast.LENGTH_LONG).show();
                         }
                     }
                 }
@@ -81,8 +83,6 @@ public class CadastroActivity extends AppCompatActivity {
             public void onClick(View view) {
                 criarUsuario();
                 configuracaoFirebase();
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                finish();
             }
         });
     }

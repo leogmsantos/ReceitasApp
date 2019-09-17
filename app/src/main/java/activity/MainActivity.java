@@ -1,4 +1,4 @@
-package com.example.receitasapp.activity;
+package activity;
 
 import android.os.Bundle;
 
